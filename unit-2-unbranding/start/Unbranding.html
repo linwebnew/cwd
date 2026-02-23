@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <title>Hello</title>
+</head>
+<body>
+
+    <style>
+        body {
+            background-color:#FFDB00;
+            font-family: helvetica, Arial, Noto Sans, sans-serif ;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        #everything {
+            width:400px;
+            height:400px;
+            /*background-color: gray;*/
+            /*margin: 500px;*/.
+            margin-top: 120px;
+            margin-bottom: 80px;
+            margin-left: auto;
+            margin-right: auto;
+
+            margin: 120px auto 80px auto;
+
+            background-image: url(assets/images/wrench.png);
+
+        }
+
+        #everything:hover {
+            background-image: url(assets/images/clock.png);
+            background-color: yellow;
+            cursor: crosshair;
+        }
+
+    </style>
+
+</body>
+</html>
+        <div id="everything">
+            
+        </div>
+
+
+    <h1>Everything You Need</h1>
+
+    <script type ="text/javascript">
+        
+        let targetElement = document.querySelector("#everything");
+        targetElement.addEventListener ("mouseover", function()
+        {
+            console.log("hey this worked!");
+        })
+        
+    </script>
+</body>
+</html>
