@@ -28,9 +28,7 @@
         
         }
 
-        .overlay {
-            position: absolute;
-            inset: 0;
+        #everything:hover {
             background-image: url(assets/images/layslies.png);
 
             background-repeat: no repeat;
@@ -40,11 +38,14 @@
             background-size: cover;
             /*this is another command I found on w3-schools that I also wanted, I wanted the size to remain relatively same and I looked it up the school website and playground with their example and saw they had this command so I tried it.*/
 
-            opacity: 0;
 
-            transition: opacity 0.4 ease;
+            transition: background-image 0.3s ease;
            
             /*The overlay is a command that I learned on Chatgpt I wanted my to be on top of the other image as close I can get them aligned- I sent you a message about this in the discord but I looked at w3-school they have an overlay effect but it wasn't what I was looking for.* the same apply to the .overlay-text, and the transition https://www.w3schools.com/css/css3_transitions.asp but he opacity was search */
+        }
+        #everything:hover .overlay {
+            opacity: 1;
+            cursor: crosshair;
         }
 
 
@@ -55,21 +56,15 @@
         transform: translate(-50, -50);
 
         /*https://www.w3schools.com/cssref/tryit.php?filename=trycss_func_translate, I was able to move the text to the center, so that it looks like a appearing comment*/
-
-
+        
         font-size: 80px;
         font font-weight: bold;
         opacity: 0;
         transition: opacity 0.4s ease;
-    }
-
-
-
-        #everything:hover .overlay {
-            opacity: 1;
-            cursor: crosshair;
-
+        
         }
+
+
         #everything:hover .overlay-text {
             opacity: 1;
         }
