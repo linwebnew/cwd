@@ -16,7 +16,7 @@
         }
 
         #everything {
-            background-image: url(assets/images/lays.png);
+            background-image: url("assets/images/lays.png");
             position: relative;
 
             /* this is something I learned in the w3 webiste, I change my whole brand because of much difficulties with the other one I wanted the image position, but I didn't know how*/
@@ -29,9 +29,9 @@
         }
 
         #everything:hover {
-            background-image: url(assets/images/layslies.png);
+            background-image: url("asset/images/layslies.png");
 
-            background-repeat: no repeat;
+            background-repeat: no-repeat;
                         /*one of the main problem I was having was the image repeating, I looked this up on both chatgpt and also w3-school to see how I can fix it and this command helped.*/
 
 
@@ -42,18 +42,14 @@
             transition: background-image 0.3s ease;
            
             /*The overlay is a command that I learned on Chatgpt I wanted my to be on top of the other image as close I can get them aligned- I sent you a message about this in the discord but I looked at w3-school they have an overlay effect but it wasn't what I was looking for.* the same apply to the .overlay-text, and the transition https://www.w3schools.com/css/css3_transitions.asp but he opacity was search */
-        }
-        #everything:hover .overlay {
-            opacity: 1;
-            cursor: crosshair;
-        }
+       
 
 
         .overlay-text{ 
         position:absolute; 
         top: 50%;
         left: 35%;
-        transform: translate(-50, -50);
+        transform: translate(-50%, -50%);
 
         /*https://www.w3schools.com/cssref/tryit.php?filename=trycss_func_translate, I was able to move the text to the center, so that it looks like a appearing comment*/
         
@@ -64,10 +60,10 @@
         
         }
 
-
-        #everything:hover .overlay-text {
+        #everything:hover .overlay {
             opacity: 1;
-        }
+            cursor: crosshair;
+        } 
 
 
     </style>
@@ -77,9 +73,6 @@
 
 
     <div id="everything">
-
-        <div class="overlay"></div>
-
         <div class="overlay-text">Lays... more like lies!</div>
 
     </div>
