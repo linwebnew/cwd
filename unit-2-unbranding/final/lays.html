@@ -4,49 +4,65 @@
     <title>Lays</title>
 
     <style>
+        /* PAGE BACKGROUND IMAGE */
         body {
-            background-color:#FCD802;
+            background-image: url("assets/images/background.png"); /* change if needed */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             font-family: sans-serif;
+            margin: 0;
         }
 
-        h1{
+        /* MAIN CONTAINER */
+        #everything {
+            position: relative;
+            width: 900px; /* controls size */
+            margin: 120px auto;
+        }
+
+        /* STACKED IMAGES */
+        .bag, .oil {
+            width: 100%;
+            display: block;
+            position: absolute;
+        
+        }
+
+        /* OIL hidden initially */
+        .oil {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .bag {
+            transition: opacity 0.5s ease;
+        }
+
+        
+        .overlay-text { 
+            position: absolute; 
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            font-weight: bold;
+            color: black;
+            opacity: 0;
+            transition: opacity 0.4s ease;
             text-align: center;
         }
 
-        #everything {
-            background-image: url("asset/images/lays.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            position: relative;
-            width: 1640px;
-            height: 845px;
-            margin: 120px auto 80px auto;
-
-            /*The overlay is a command that I learned on Chatgpt I wanted my to be on top of the other image as close I can get them aligned- I sent you a message about this in the discord but I looked at w3-school they have an overlay effect but it wasn't what I was looking for.* the same apply to the .overlay-text, and the transition https://www.w3schools.com/css/css3_transitions.asp but he opacity was search */
-
-        }
-
-        #everything:hover {
-            background-image: url("asset/images/layslies.png");
-            transition: 0.3s ease;
-
-            /*https://www.w3schools.com/cssref/tryit.php?filename=trycss_func_translate, I was able to move the text to the center, so that it looks like a appearing comment*/
-        }
-
-        .overlay-text{ 
-            position:absolute; 
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 80px;
-            font-weight: bold;
+        /* HOVER EFFECT */
+        #everything:hover .bag {
             opacity: 0;
-            transition: opacity 0.4s ease;
+        }
+
+        #everything:hover .oil {
+            opacity: 1;
         }
 
         #everything:hover .overlay-text {
             opacity: 1;
-            cursor: crosshair;
         }
     </style>
 </head>
@@ -54,15 +70,10 @@
 <body>
 
     <div id="everything">
+        <img src="assets/images/lays chips.png" class="bag">
+        <img src="assets/images/oil.png" class="oil">
         <div class="overlay-text">Lays... more like lies!</div>
     </div>
-
-    <script>
-        let targetElement = document.querySelector("#everything");
-        targetElement.addEventListener("mouseover", function() {
-            console.log("hey this worked!");
-        });
-    </script>
 
 </body>
 </html>
