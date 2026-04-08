@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <title>Sus Calculator</title>
+
+      <style>
+        .calculator {
+            background: #f7f7f7;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .calculator input {
+            height: 25px;          
+            font-size: 20px;       
+            margin-bottom: 12px;
+        }
+
+        .calculator label {
+            display: block;          
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .calculator button {
+            height: 55px;
+            font-size: 22px;
+        }
+      </style>
+</head>
+
+<body>
+
+    <h1>Usability Test</h1>
+
+    <div class="container">
+        <h2>Task </h2>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Discription</th>
+                    <th>Observations</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+                <td>Task 1</td>
+                <td>
+                    <img src="assets/images/plussize.png" class="img-thumbnail" alt="Image of woman wearing a pink shirt with white and dark pink roses on it, this shirt is a vtop. The price of the shirt is $8.35">
+                </td>
+                <td>Add a piece of women's clothing with plus-sized options from your Local Warehouse</td>
+                <td>The subject Went immediately to the local warehouse and searched for Somethhing else first, due to a miscommunication, then corrected to general clothing, they quickly searched and found an item that fit the description given very quickly</td>
+                <td>78 seconds</td>
+            </tr>      
+
+            <tr>
+                <td>Task 2</td>
+                <td>
+                    <img src="assets/images/tasks2.png" class="img-thumbnail" alt="Image of a black microwave with text above it reading comapact size and the microwaze is $70">
+                </td>
+                <td>You're really hungry, and you have 90$ in your bank account, and you need a microwave.</td>
+                <td>The subject used search bar to find a microwave, took a bit to find an item that fit all of the description.</td>
+                <td>144 seconds</td>
+            </tr>
+
+            <tr>
+                <td>Task 3</td>
+                <td>
+                    <img src="assets/images/return.png" class="img-thumbnail" alt="Image of Temu's return policy and link to helpful resource on how to find your items.">
+                </td>
+                <td>You bought an item and it hasn't arrived.</td>
+                <td>The subject did not go to the chatbot at first and instead browsed items.</td>
+                <td>120.6 seconds</td>
+            </tr>
+
+            <tr>
+                <td>Task 4</td>
+                <td>
+                    <img src="assets/images/tasks4.png" class="img-thumbnail" alt="Image show rolls of screenshot images showing the customer how to return an item.">
+                </td>
+                <td>Find a way to return an item</td>
+                <td>Subject found where to return an item within a minute.</td>
+                <td>120 seconds</td>
+            </tr>
+
+            <tr>
+                <td>Task 5</td>
+                <td>
+                    <img src="assets/images/tasks5.png" class="img-thumbnail" alt="Image of the bottom section of the Temu home page, where the mouse cursor is hovering over the Work Career link that leads to LinkedIn.">
+                </td>
+                <td>Find a way to apply for a job</td>
+                <td>Found careers button at bottom of page.</td>
+                <td>59 seconds</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+        <div class="calculator">
+        <p><small>Rate 1–5 (1 = Strongly Disagree, 5 = Strongly Agree)</small></p>
+
+        <form action="#" id="myForm">        
+
+            <div> 
+                <label class="control-label">1. I think that I would like to use this system frequently.</label>
+                <input type="number" id="q1" name="q1" value="" min="1" max="5" step="1" required class="form-control">
+            </div>
+
+            <div> 
+                <label class="control-label">2. I found the system unnecessarily complex.</label>
+                <input type="number" id="q2" name="q2" value="" min="1" max="5" step="1" required class="form-control">
+            </div>
+
+            <div> 
+                <label class="control-label">3. I thought the system was easy to use.</label>
+                <input type="number" id="q3" name="q3" value="" min="1" max="5" step="1" required class="form-control">
+            </div>
+
+            <div> 
+                <label class="control-label">4. I think that I would need the support of a technical person.</label>
+                <input type="number" id="q4" name="q4" value="" min="1" max="5" step="1" required class="form-control">
+            </div>
+
+            <div> 
+                <label class="control-label">5. I found the functions well integrated.</label>
+                <input type="number" id="q5" name="q5" value="" min="1" max="5" step="1" required class="form-control">
+            </div>
+
+            <div> 
+                <label class="control-label">6. I thought there was too much inconsistency.</label>
+                <input type="number" id="q6" name="q6" value="" min="1" max="5" step="1" required class="form-control">
+            </div>
+
+            <div> 
+                <label class="control-label">7. Most people would learn this quickly.</label>
+                <input type="number" id="q7" name="q7" value="" min="1" max="5" step="1" required class="form-control">
+            </div>
+
+            <div> 
+                <label class="control-label">8. I found the system cumbersome.</label>
+                <input type="number" id="q8" name="q8" value="" min="1" max="5" step="1" required class="form-control">
+            </div>
+
+            <div> 
+                <label class="control-label">9. I felt very confident using the system.</label>
+                <input type="number" id="q9" name="q9" value="" min="1" max="5" step="1" required class="form-control">
+            </div>
+
+            <div> 
+                <label class="control-label">10. I needed to learn a lot before using it.</label>
+                <input type="number" id="q10" name="q10" value="" min="1" max="5" step="1" required class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <div class="form-group"></div>
+
+            <label class="control-label">Result</label>
+            <input type="number" id="answer" class="form-control">
+
+        </form>
+        </div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
