@@ -8,30 +8,34 @@
 
 <style>
 /* scroll behavior was taken form chat gpt*/
-*{
+
+{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+
 html{
     scroll-behavior:smooth;
 }
 
+
 body{
     font-family:Arial, sans-serif;
-    background:#ffe5ec;
+    background:#F2DAE0;
     color:#333;
     overflow-x:hidden;
 }
 
-/* ===============================
-   TOP BAR
-================================= */
+
+/* Top-Box*/
 .top-bar{
     position:sticky;
     top:0;
     z-index:1000;
+
+/* this background linear gradient https://www.w3schools.com/css/css3_gradients.asp*/
     background:linear-gradient(90deg,#a2d2ff,#bde0fe);
     padding:16px;
     text-align:center;
@@ -41,9 +45,7 @@ body{
     box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
-/* ===============================
-   INTRO SECTION
-================================= */
+
 .intro{
     max-width:900px;
     margin:auto;
@@ -71,7 +73,8 @@ body{
     margin-bottom:14px;
 }
 
-/* I leared rgba through ai*/
+
+/* I learned rgba through ai*/
 .module{
     background:rgba(255,255,255,.92);
     border-radius:20px;
@@ -80,9 +83,7 @@ body{
     box-shadow:0 10px 30px rgba(0,0,0,.12);
 }
 
-/* ===============================
-   STORY PANELS
-================================= */
+
 .panel{
     min-height:100vh;
     position:relative;
@@ -93,21 +94,22 @@ body{
     text-align:center;
 }
 
-/* the z-indext I did not kmow what it was but I learned it from Ai ans went to W3 school to learn about it */
+/* The z-indext I did not know what it was but I learned it from Ai and went to W3 school to learn about it */
 .background{
     position:absolute;
     inset:0;
     background-size:cover;
     background-position:center;
-    filter:brightness(.72);
+    filter:brightness(.95);
     z-index:1;
 }
 
-/* Overlay */
+/* Overlay: https://www.w3schools.com/howto/howto_css_overlay.asp */
+
 .overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.15);
+   background:rgba(0,0,0,0);
     z-index:2;
 }
 
@@ -126,7 +128,7 @@ body{
 }
 
 .content h1{
-    font-colot:black;
+    font-color:black;
     font-size:38px;
     margin-bottom:15px;
 }
@@ -136,17 +138,19 @@ body{
     line-height:1.7;
 }
 
+
 .gift-box{
     margin-top:20px;
 }
 
 .gift-box summary{
     list-style:none;
-    cursor:pointer;
     background:#ffd6e8;
     padding:14px 20px;
     border-radius:14px;
     font-weight:bold;
+
+/* inspirtation: https://www.w3schools.com/css/css_inline-block.asp */
     display:inline-block;
     color:#5a2a3a;
 }
@@ -163,6 +167,18 @@ body{
     color:black;
     animation:fadeUp .6s ease;
 }
+
+#chart{
+    margin-top:30px;
+}
+
+#chart canvas{
+    background:rgba(255,255,255,.92);
+    border-radius:16px;
+    padding:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
 
 /* Ai helped me with the keyframe, mobile */
 @keyframes fadeUp{
@@ -197,7 +213,7 @@ body{
 <body>
 
 <div class="top-bar">
-✨ A good name is rather to be chosen than riches ✨
+    ✨A good name is rather to be chosen than riches✨
 </div>
 
 <section class="intro">
@@ -212,7 +228,7 @@ body{
         Explore popular names from the early 1900s and compare them with names chosen today.
     </p>
 
-    <!-- Flourish provided the code to embeded once you tried ot export. -->
+    <!-- Flourish provided the code to embeded once you tried to export. -->
     <div class="module">
 
         <h2 style="margin-bottom:18px; color:#0d1b2a;">
@@ -234,11 +250,13 @@ body{
 
 </section>
 
+
+
 <!-- PANEL 1 -->
 <section class="panel">
 
     <div class="background"
-         style="background-image:url('assets/images/background.png');">
+         style="background-image:url('assets/images/pink.png');">
     </div>
 
     <div class="overlay"></div>
@@ -273,13 +291,13 @@ body{
 <section class="panel">
 
     <div class="background"
-         style="background-image:url('assets/images/grid.png');">
+         style="background-image:url('assets/images/pink.png');">
     </div>
 
     <div class="overlay"></div>
 
     <div class="content">
-        <img src="assets/images/babygirl.png">
+        <img src="assets/images/babygirl.png" alt="image of a baby girl in a lace dress">
         <h1>HMMMM...what about a girl.. can you guess?</h1>
         <p>
             What is the most common girl name from the 1900s?
@@ -289,7 +307,7 @@ body{
             <div class="reveal">
                 <h2>Mary</h2>
                 <p>
-                    Mary was one of the most common boys' names in the early 1900s.
+                    Mary was one of the most common girl's names in the early 1900s.
                 </p>
             </div>
 
@@ -302,24 +320,113 @@ body{
 <section class="panel">
 
     <div class="background"
-         style="background-image:url('assets/images/background.png');">
+         style="background-image:url('assets/images/pink.png');">
     </div>
 
     <div class="overlay"></div>
 
     <div class="content">
         <img src="assets/images/vintagebaby.png">
-        <h1>How Are These Names Seen Now?</h1>
+        <h1>what names are popular in the 2000s</h1>
         <p>
-            Compare classic names from 1900 with today’s modern choices.
+             Name choices 100 years later. 
         </p>
+        <div id="chart"></div>
     </div>
 
 
 </section>
 
-<!-- Flourish script only -->
+<!-- Flourish script only- this code was porvided from flourish itself -->
 <script src="https://public.flourish.studio/resources/embed.js"></script>
+
+
+
+<!-- this is for the 2000s chart to show up, but also have a more interactive feature. The infromation was given by me from my data source and I tried to use flourish but the graph did not look right so I tried using Ai and this is code they gave me-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.createElement('canvas');
+    document.getElementById('chart').appendChild(ctx);
+ new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [
+            'Jacob / Emily',
+            'Michael / Madison',
+            'Joshua / Emma',
+            'Matthew / Olivia',
+            'Daniel / Hannah',
+            'Christopher / Abigail',
+            'Andrew / Isabella',
+            'Ethan / Samantha',
+            'Joseph / Elizabeth',
+            'William / Ashley'
+        ],
+        datasets: [
+            {
+                label: 'Boy Names',
+                data: [274064,250702,232037,221620,203951,203370,202577,201825,194937,194404],
+                backgroundColor: '#bde0fe',
+                borderColor: '#7bbff5',
+                borderWidth: 1,
+                borderRadius: 8
+            },
+            {
+                label: 'Girl Names',
+                data: [223755,193217,181393,156048,155775,150923,149569,134310,133557,133050],
+                backgroundColor: '#ff69a6',
+                borderColor: '#d94f87',
+                borderWidth: 1,
+                borderRadius: 8
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: 'Top Baby Names of the 2000s',
+                color: '#3b0f1d',
+                font: {
+                    size: 20,
+                    weight: 'bold'
+                }
+            },
+            legend: {
+                labels: {
+                    color: '#3b0f1d',
+                    font: {
+                        size: 14
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                ticks: {
+                    color: '#3b0f1d',
+                    maxRotation: 45,
+                    minRotation: 45
+                },
+                grid: {
+                    color: '#f7c6d4'
+                }
+            },
+            y: {
+                ticks: {
+                    color: '#3b0f1d'
+                },
+                grid: {
+                    color: '#f7c6d4'
+                }
+            }
+        }
+    }
+});
+</script>
+    })
+</script>
 
 </body>
 </html>
